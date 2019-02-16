@@ -1,0 +1,37 @@
+//05-04-Descending Sort of 3 numbers by swaping 
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var a = 0D;
+            var b = 0D;
+            var c = 0d;
+            a = double.Parse(Console.ReadLine());
+            b = double.Parse(Console.ReadLine());
+            c = double.Parse(Console.ReadLine());
+            if (a > b && a > c)
+            {
+                if (b > c)
+                { Console.WriteLine("{0}\n{1}\n{2}", a, b, c); }
+                else
+                { Console.WriteLine("{0}\n{1}\n{2}", a, c, b); }
+            }
+            if (b > a && b > c)
+            {
+                if (a > c)
+                { Console.WriteLine("{0}\n{1}\n{2}", b, a, c); }
+                else
+                { Console.WriteLine("{0}\n{1}\n{2}", b, c, a); }
+            }
+            if (c > a && c > b)
+            {
+                if (a > b)
+                { Console.WriteLine("{0}\n{1}\n{2}", c, a, b); }
+                else
+                { Console.WriteLine("{0}\n{1}\n{2}", c, b, a); }
+            }
+            Console.ReadKey();
+        }
+    }
+}

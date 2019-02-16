@@ -1,0 +1,36 @@
+05-06-Quadratic equation (a*(x^2) + b*x + c = 0) real roots calc
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+        int a, b, c;
+            var d = 0D; // Discriminant
+            var x1 = 0D; //first real root
+            var x2 = 0D; //second real root
+            Console.WriteLine("Input coefficients a, b, c of Quadratic Equation, please:");
+            Console.Write("a: ");
+            a = int.Parse(Console.ReadLine());
+            Console.Write("b: ");
+            b = int.Parse(Console.ReadLine());
+            Console.Write("c: ");
+            c = int.Parse(Console.ReadLine());
+            d = Math.Pow(b, 2) - 4 * a * c;
+            if (d == 0)
+            {
+                x1 = x2 = -b / (2 * a);
+                Console.WriteLine("Real roots is: x1 = {0}, x2 = {1}", x1, x2);
+            }
+                else if (d > 0)
+                {
+                x1 = (-b + Math.Sqrt(d)) / (2 * a);
+                x2 = (-b - Math.Sqrt(d)) / (2 * a);
+                Console.WriteLine("Real roots is: x1 = {0}, x2 = {1}", x1, x2);
+                }
+                    else
+                    {
+                     Console.WriteLine("Real roots is not exist");
+                    }
+        }
+    }
+}

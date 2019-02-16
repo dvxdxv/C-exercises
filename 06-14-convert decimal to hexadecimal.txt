@@ -1,0 +1,60 @@
+ //06-14-convert decimal to hexadecimal  
+    {
+        static void Main(string[] args)
+        {
+            var n = 0;
+            Console.WriteLine("¬ведите число n:");
+            n = int.Parse(Console.ReadLine());
+            var hex = "";
+            var remain = 0;
+            do
+            {
+                remain = n % 16;
+                switch (remain)
+                {
+                    case 10: hex = 'A' + hex;
+                        break;
+                    case 11: hex = 'B' + hex;
+                        break;
+                    case 12: hex = 'C' + hex;
+                        break;
+                    case 13: hex = 'D' + hex;
+                        break;
+                    case 14: hex = 'E' + hex;
+                        break;
+                    case 15: hex = 'F' + hex;
+                        break;
+                    default: hex = remain + hex;
+                        break;
+                }
+                n = n / 16;
+            } while (n / 16 != 0);
+            remain = n % 16;
+            switch (remain)
+            {
+                case 10:
+                    hex = 'A' + hex;
+                    break;
+                case 11:
+                    hex = 'B' + hex;
+                    break;
+                case 12:
+                    hex = 'C' + hex;
+                    break;
+                case 13:
+                    hex = 'D' + hex;
+                    break;
+                case 14:
+                    hex = 'E' + hex;
+                    break;
+                case 15:
+                    hex = 'F' + hex;
+                    break;
+                default:
+                    hex = remain + hex;
+                    break;
+            }
+            Console.WriteLine(hex);
+            Console.ReadKey();
+        }
+    }

@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3
+{
+    class Program
+  //Moon weight calc
+    {
+        static void Main(string[] args)
+        {
+            double weightEarth, weightMoon;
+            {
+                Console.Write("Введите вес человека: ");
+                weightEarth = Convert.ToDouble(Console.ReadLine());
+                weightMoon = weightEarth * 17/100;
+                Console.Write("Вес человека на Луне: ");
+                Console.Write(weightMoon);
+                Console.ReadKey();
+            }
+        }
+    }
+}

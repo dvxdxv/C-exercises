@@ -1,0 +1,20 @@
+//05-01-exchange values if bigger
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int temp;
+            int x = 16;
+            int y = 3;
+            if (x>y)
+            {
+                temp = x;
+                x = y;
+                y = temp;
+            }
+            Console.WriteLine(x+", "+y);
+            Console.ReadKey();
+        }
+    }
+}

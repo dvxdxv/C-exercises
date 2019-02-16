@@ -1,0 +1,50 @@
+ //06-15-convert hexadecimal to decimal  
+    {
+        static void Main(string[] args)
+        {
+
+            var hex = "";
+            Console.WriteLine("¬ведите число hex:");
+            hex = Console.ReadLine();
+            var num10 = 0d;
+            char[] b = new char[hex.Length];
+            for (int i1 = 0; i1 < hex.Length; i1++)
+                b[i1] = hex[i1];
+            var length = hex.Length;
+            char[] reversed = new char[length];
+            for (int index = 0; index < length; index++)
+            {
+             reversed[length - index - 1] = hex[index];
+            }
+            for (int index = 0; index < length; index++)
+            {
+                switch (reversed[index])
+                {
+                    case 'A':
+                        num10 = 10 * Math.Pow(16, index) + num10;
+                        break;
+                    case 'B':
+                        num10 = 11 * Math.Pow(16, index) + num10;
+                        break;
+                    case 'C':
+                        num10 = 12 * Math.Pow(16, index) + num10;
+                        break;
+                    case 'D':
+                        num10 = 13 * Math.Pow(16, index) + num10;
+                        break;
+                    case 'E':
+                        num10 = 14 * Math.Pow(16, index) + num10;
+                        break;
+                    case 'F':
+                        num10 = 15 * Math.Pow(16, index) + num10;
+                        break;
+                    default:
+                        string cString = reversed[index].ToString();
+                        num10 = double.Parse(cString) * Math.Pow(16, index) + num10;
+                        break;
+                }
+            }
+            Console.WriteLine(num10);
+            Console.ReadKey();
+        }
+    }

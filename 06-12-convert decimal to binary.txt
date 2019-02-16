@@ -1,0 +1,27 @@
+//06-12-convert decimal to binary  
+    {
+        static void Main(string[] args)
+        {
+            var n = 0;
+            Console.WriteLine("¬ведите число n:");
+            n = int.Parse(Console.ReadLine());
+            var binary = "";
+            var remain = 0;
+            do
+            {
+                remain = n % 2;
+                if (remain !=0)
+                {
+                    binary = "1" + binary;
+                }
+                else
+                {
+                    binary = "0" + binary;
+                }
+                n = n / 2;
+            } while (n/2!=0);
+             binary = "1" + binary;
+            Console.WriteLine(binary);
+            Console.ReadKey();
+        }
+    }

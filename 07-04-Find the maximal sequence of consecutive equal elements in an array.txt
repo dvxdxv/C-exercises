@@ -1,0 +1,41 @@
+07-04-Find the maximal sequence of consecutive equal elements in an array
+    {
+        static void Main(string[] args)
+        {
+            var n = 0;
+            var sequence = 1;
+            var bestSequence = 1;
+            var seqStart = 0;
+            var bestStart = 0;
+            Console.WriteLine("Введите количество символов массива А:");
+            n = int.Parse(Console.ReadLine());
+           
+            int[] array1 = new int[n];
+            Console.WriteLine("Введите {0} символов массива А:", n);
+                for (int i = 0; i < n; i++)
+                {
+                    array1 [i] = int.Parse(Console.ReadLine());
+                }
+            //Поиск наибольшей последовательности из одинаковых чисел в массиве
+            for (int i = 1; i < n; i++)
+            {
+                if (array1[i] == array1[i-1])
+                {
+                    sequence = sequence + 1;
+                    if (sequence > bestSequence)
+                    {
+                        bestSequence = sequence;
+                        bestStart = seqStart;
+                    }
+                }
+                else
+                {
+                    sequence = 1;
+                    seqStart = i;
+                }
+
+            }
+            Console.WriteLine("Наибольшая последовательность {0} одинаковых чисел начинается с элемента с индексом {1}", bestSequence, bestStart);
+        }
+
+    }

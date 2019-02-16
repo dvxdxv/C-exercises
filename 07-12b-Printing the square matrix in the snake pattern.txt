@@ -1,0 +1,40 @@
+07-12b-Printing the square matrix in the snake pattern
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the wide and height of the matrix:");
+            int h, w;
+            int num = 0;
+            h = int.Parse(Console.ReadLine());
+            w = int.Parse(Console.ReadLine());
+            //Creates an arrays
+            int[,] matrix = new int[h, w];
+            //Input the values to the matrix
+            for (int i = 0; i < h; i++)
+            {
+                for (int j = 0; j < w; j++)
+                {
+                    num++;
+                    matrix[i, j] = num;
+                }
+            }
+            //print the filled matrix
+
+            for (int i = 0; i < h; i++)
+            {
+
+                for (int j = 0; j < w; j++)
+                {
+                    if ((j + 1) % 2 == 0) //j is even
+                    {
+                        Console.Write(matrix[j, h - 1 - i]);
+                    }
+                    else  //j is odd
+                    {
+                        Console.Write(matrix[j, i]);
+                    }
+                }
+                Console.WriteLine();
+            }
+        }
+    }

@@ -1,0 +1,51 @@
+//05-07-Biggest from 5 real numbers via if&loop&array
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var t1 = 0d;
+            var t2 = 0d;
+            int[] mas = new int[5];
+            for (int i = 0; i < 5; ++i)
+            {
+                mas[i] = int.Parse(Console.ReadLine());
+            }
+            if (mas[0] > mas[1])
+            {
+                t1 = mas[0];
+            }
+            else
+            {
+                t1 = mas[1];
+            };
+            if (mas[2] > mas[3])
+            {
+                t2 = mas[2];
+            }
+            else
+            {
+                t2 = mas[3];
+            }
+            if (t1 > t2)
+            {
+                if (t1 > mas[4])
+                {
+                    Console.WriteLine("Biggest number is " + t1);
+                }
+                else
+                {
+                    Console.WriteLine("Biggest number is " + mas[4]);
+                }
+            }
+            else if (t2 > mas[4])
+                {
+                Console.WriteLine("Biggest number is " + t2);
+                }
+                else
+                {
+                Console.WriteLine("Biggest number is " + mas[4]);
+            }
+        }
+    }
+}   

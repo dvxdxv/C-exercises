@@ -1,0 +1,28 @@
+06-07-program that calculates N!*K!/(N-K)! for given N and K (1<K<N)
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("¬ведите число K больше 1: ");
+            int k = int.Parse(Console.ReadLine());
+            Console.Write("¬ведите число N больше, чем K: ");
+            int n = int.Parse(Console.ReadLine());
+            int denum = 1;
+            double numTwice = 1;
+            double numOver = 1;
+            double result = 1;
+            for (int i = 1; i <= n-k; i++)
+            {
+                denum *= i;
+            } 
+            for (int i1 = 1; i1 <= k; i1++)
+            {
+                numTwice *= Math.Pow(i1, 2);
+            }
+            for (int i2 = k+1; i2 <= n; i2++)
+            {
+                numOver *= i2;
+            }
+            result = numTwice * numOver / denum;
+            Console.WriteLine("N!*K!/(N-K)! for given N and K (1<K<N) = " + result);
+        }
+    }

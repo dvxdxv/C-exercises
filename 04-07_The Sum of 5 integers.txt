@@ -1,0 +1,33 @@
+//The Sum of 5 Integers
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int x1, x2, x3, x4, x5;
+            Console.WriteLine("Введите 5 целых чисел: \n");
+            while(!int.TryParse(Console.ReadLine(), out x1))
+            {
+                Console.WriteLine("Bad integer");
+            }
+            while (!int.TryParse(Console.ReadLine(), out x2))
+            {
+                Console.WriteLine("Bad integer");
+            }
+            while (!int.TryParse(Console.ReadLine(), out x3))
+            {
+                Console.WriteLine("Bad integer");
+            }
+            while (!int.TryParse(Console.ReadLine(), out x4))
+            {
+                Console.WriteLine("Bad integer");
+            }
+            while (!int.TryParse(Console.ReadLine(), out x5))
+            {
+                Console.WriteLine("Bad integer");
+            }
+            Console.WriteLine("Сумма введенных чисел составляет: "+(x1 + x2 + x3 + x4 + x5));
+            Console.ReadKey();
+        }
+    }
+}

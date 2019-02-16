@@ -1,0 +1,19 @@
+//05-04-Descending Sort of 3 numbers by Array.Reverse 
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] mas = new int[3];
+            for (int i = 0; i < 3; i++)
+            {
+                mas[i] = int.Parse(Console.ReadLine());
+            }
+            Array.Sort(mas);
+	    Array.Reverse(mas);
+            foreach (var v in mas)
+            Console.WriteLine(v);
+            Console.ReadKey();
+        }
+    }
+}

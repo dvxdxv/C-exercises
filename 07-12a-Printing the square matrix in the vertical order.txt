@@ -1,0 +1,40 @@
+//07-12a-Printing the square matrix in the vertical order
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the wide and height of the matrice:");
+            int h, w;
+            int num = 0;
+            h = int.Parse(Console.ReadLine());
+            w = int.Parse(Console.ReadLine());
+            //Creates an arrays
+            int[,] matrix = new int[h, w];
+            //Input the values to the matrice
+            for (int j = 0; j < w; j++)
+            {
+                for (int i = 0; i < h; i++)
+                {
+                    num++;
+                    matrix[i, j] = num;
+                }
+
+            }
+            //Print the filled matrix
+            for (int i = 0; i < w; i++)
+            {
+                for (int j = 0; j < h; j++)
+                {
+                        if (num>9)
+                        {
+                            Console.Write(" "+matrix[i, j]);
+                        }
+                        else
+                        {
+                            Console.Write(" "+matrix[i, j] + " ");
+                        }
+                }
+                Console.WriteLine();
+            }
+        }
+    }
+}

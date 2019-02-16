@@ -1,0 +1,50 @@
+07-03-Сompares two arrays of type char lexicographically (character by character)
+    {
+        static void Main(string[] args)
+        {
+            var n = 0;
+            var m = 0;
+            var small = 0;
+            string less;
+            Console.WriteLine("Введите количество символов массива А:");
+            n = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введите количество символов массива B:");
+            m = int.Parse(Console.ReadLine());
+            small = Math.Sign(n - m) == +1 ? m : n ;
+            char[] array1 = new char[n];
+            char[] array2 = new char[m];
+            Console.WriteLine("Введите {0} символов массива А:", n);
+                for (int i = 0; i < n; i++)
+                {
+                    array1 [i] = char.Parse(Console.ReadLine());
+                }
+            Console.WriteLine("Введите {0} символов массива B:", m);
+                for (int i1 = 0; i1 < m; i1++)
+                {
+                    array2 [i1] = char.Parse(Console.ReadLine());
+                }
+                //Сравнение значений массивов лексикографически (по порядку) и проверка какой массив первый
+                for (int i = 0; i < small; i++)
+                {
+                    if (array1[i] < array2[i])
+                    {
+                    Console.WriteLine("Массив A первый, массив B второй");
+                    return;
+                }
+                        else if (array1[i] > array2[i])
+                            {
+                            Console.WriteLine("Массив B первый, массив A второй");
+                            return;
+                            }
+                }
+            if (n - m == 0)
+            {
+                Console.WriteLine("Массив A и массив B одинаковы");
+            }
+            else
+            {
+                less = small == n ? "Массив A первый, массив B второй": "Массив B первый, массив A второй";
+                Console.WriteLine(less);
+            }
+        }
+    }

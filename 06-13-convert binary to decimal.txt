@@ -1,0 +1,31 @@
+ //06-13-convert binary to decimal  
+    {
+        static void Main(string[] args)
+        {
+            var b = 0;
+            Console.WriteLine("¬ведите число b:");
+            b = int.Parse(Console.ReadLine());
+            var num10 = 0d;
+            var i = 0 ;
+            var remain = 0;
+            do
+            {
+                remain = b % 2;
+                if (remain !=0)                                                                                                                                                                                                              
+                {
+                    num10 += 1*Math.Pow(2,i);
+                }
+                else
+                {
+                    num10 += 0;
+                }
+
+                b = b / 10;
+                i = i + 1;
+            }
+            while (b/10>=1);
+            num10 = num10 +1*Math.Pow(2,i);
+            Console.WriteLine(num10);
+            Console.ReadKey();
+        }
+    }

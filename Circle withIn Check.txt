@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3
+{
+    class Program
+  //Circle withIn Check
+    {
+        static void Main(string[] args)
+        {
+            int x, y;
+            {
+                Console.WriteLine("Положение точки А на оси абцисс:");
+                x = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Положение точки А на оси ординат:");
+                y = Convert.ToInt32(Console.ReadLine());
+                int check = x * x + y * y;
+                Console.WriteLine(check>5*5 ? "Не входит" : "Входит");
+                Console.ReadKey();
+            }
+        }
+    }
+}

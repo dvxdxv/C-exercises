@@ -1,0 +1,23 @@
+//06-09-program which calculates the sum of n-factorials divided by x in n-power
+    {
+        static void Main(string[] args)
+        {
+            var n = 1;
+            var x = 1;
+            var f = 1d; //факториал
+            var pow = 1d;
+            double sum = 1;
+            Console.WriteLine("¬ведите число n:");
+            n = int.Parse(Console.ReadLine());
+            Console.WriteLine("¬ведите число x:");
+            x = int.Parse(Console.ReadLine());
+            for (int i = 1; i <=n; i++)
+            {  
+                f *= i;
+                pow *= x;
+                sum += f/pow;
+            }
+            Console.WriteLine("—умма = {0}", sum);
+            Console.ReadKey();
+        }
+    }

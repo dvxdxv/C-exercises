@@ -1,0 +1,7 @@
+       
+            var animals = new Dictionary<int, string>();
+            animals.Add(50, "собачка");
+            animals.Add(100, "кошечка");
+            animals.Add(40, "белочка");
+            Console.WriteLine(animals[50]);
+            Console.WriteLine("{0,-10:X}{1,-10:F2}{2,-10:f2}", x, f, n);

@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3
+{
+    class Program
+    //Prime Numbers Search
+    {
+        static void Main(string[] args)
+        {
+            //Придаем переменной n значения от 1 до 100
+            int n;
+            int i;
+            double x = 0;
+            var y = 0;
+            var div = 0;
+            Console.WriteLine("Целые (простые) числа в диапазоне от 1 до 100:");
+            for (n = 1; n < 100; n++)
+            {
+                //Делим n на последовательность i от 1 до 100 
+                for (i = 1; i < 100; i++)
+                {
+                    x = n % i;
+                    if (x != 0)
+                    {
+                        ++div;
+                    }
+                    else
+                    {
+                        ++y;
+                    }
+                }
+                if (y == 2 ? true : false)
+                Console.Write("{0} ", n);
+                y = 0; //Обнуляем y после прохождения цикла
+            }
+            Console.ReadKey();
+        }
+    }
+}

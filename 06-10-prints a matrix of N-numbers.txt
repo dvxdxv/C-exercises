@@ -1,0 +1,31 @@
+using System;
+using System.Numerics;
+using System.Collections.Generic;
+
+using System.Text;
+
+namespace ConsoleApp1
+{
+
+    internal class Program
+    //06-10-prints a matrix of N-numbers
+    {
+        static void Main(string[] args)
+        {
+            var n = 0;
+            Console.WriteLine("Введите число n от 1 до 20:");
+            n = int.Parse(Console.ReadLine());
+            Console.WriteLine("Матрица n-значений:");
+            for (int r = 1; r <= n; r++)
+            {
+                Console.Write(r);
+                for (int i = r+1; i < n+r; i++)
+                {
+                    Console.Write(i);
+                }
+                Console.WriteLine("");
+            }
+            Console.ReadKey();
+        }
+    }
+}

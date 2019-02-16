@@ -1,0 +1,22 @@
+//Print 1-n numbers
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n;
+            int i;
+            Console.WriteLine("¬ведите количество чисел: \n");
+            while (!int.TryParse(Console.ReadLine(), out n))
+            {
+                Console.WriteLine("Bad integer");
+            }
+            Console.WriteLine("\n");
+            for (i = 1; i <= n; i++)
+            {
+            Console.WriteLine(i);
+            }
+            Console.ReadKey();
+        }
+    }
+}

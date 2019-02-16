@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3
+    //Company info
+{
+    class Program
+    //name, address, phone number, fax number, web site and manager. The manager has name, surname and phone number. 
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите название компании: "); string company = Console.ReadLine();
+            Console.Write("Введите адрес компании: "); string address = Console.ReadLine();
+            Console.Write("Введите телефон компании: "); string firmTel = Console.ReadLine();
+            Console.Write("Введите факс: "); string fax = Console.ReadLine();
+            Console.Write("Вебсайт компании: "); string www = Console.ReadLine();
+            Console.Write("Имя менеджера: "); string mngrName = Console.ReadLine();
+            Console.Write("Фамилия менеджера: "); string mngrSurname = Console.ReadLine();
+            Console.Write("Контактный телефон менеджера: "); string mngrTel = Console.ReadLine();
+            Console.WriteLine("\nInformation about the company " + company+":");
+            Console.WriteLine("Name of company is {0} \nCompany address is {1} \nContact tel. is {2}; fax is {3} \nCompany website is {4}\n Your personal manager is "+mngrName+" "+mngrSurname+" "+mngrTel, company, address, firmTel, fax, www);
+            Console.ReadKey();
+        }
+    }
+}

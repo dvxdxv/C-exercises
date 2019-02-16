@@ -1,0 +1,31 @@
+//06-16-prints the numbers from 1 to N in random order
+    {
+        static void Main(string[] args)
+        {
+            var n = 0;
+            
+            n = int.Parse(Console.ReadLine());
+            int[] sequence = new int[n];
+            Console.WriteLine("Ёлементы массива:");
+            for (int i = 0; i < n; i++)
+            {
+                sequence[i] = 1+i;
+                int s = sequence[i];
+                Console.WriteLine(sequence[i]); 
+             }
+            for (int i = 0; i < n/2; i++)
+            {
+                int temp = sequence[i];
+                System.Random random = new System.Random();
+                int i1 = random.Next(n / 2, n);
+                sequence[i] = sequence[i1];
+                sequence[i1] = temp;
+            }
+            Console.WriteLine("ѕеремешанные элементы массива:");
+            foreach (var item in sequence)
+            {
+                Console.WriteLine(item); 
+            }
+
+            Console.ReadKey();
+        }

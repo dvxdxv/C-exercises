@@ -1,0 +1,38 @@
+//Quantity of numbers divisioned by 5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите 2 числа: \n");
+            double q;
+            double res;
+            double a = double.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
+
+            if (a % 5 == 0 || b % 5 == 0) //задача упрощается, если любое из введенных числе кратно 5
+            {
+                q = 1+ (Math.Max(a, b) - Math.Min(a, b)) /5-(Math.Max(a, b) - Math.Min(a, b)) % 5/5;
+            }
+            else
+            {
+                if (a != b)
+                {
+                    if (Math.Min(a, b) < 0) //если меньшее число отрицательное, приводим его к кратному пути прибавлением, а не вычитанием
+                    {
+                        res = Math.Min(a, b) - Math.Min(a, b) % 5;
+                        q = 1 + ((Math.Max(a, b) - res)) / 5 - ((Math.Max(a, b) - res)) % 5 / 5;
+                    }
+                    else
+                    {
+                        res = (5 - (Math.Min(a, b) % 5) / 5 / 0.2) + Math.Min(a, b); //приводим меньшее число к кратному 5
+                        q = 1 + ((Math.Max(a, b) - res)) / 5 - ((Math.Max(a, b) - res)) % 5 / 5;
+                        Console.WriteLine(res);
+                    }
+                }
+                else
+                { q = 0; } //если числа равны и не кратны 5
+            }
+            Console.WriteLine("Количество чисел, кратных 5 = " + q);
+            Console.ReadKey();
+        }

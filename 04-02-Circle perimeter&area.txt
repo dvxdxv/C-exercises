@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3
+    //Circle perimeter&Area
+{
+    class Program
+    { 
+        static void Main(string[] args)
+        {
+            var r = int.Parse(Console.ReadLine());
+            var p = Math.PI;
+           //circle perimeter = 2pr; circle area = pr^2
+            Console.WriteLine("Радиус круга = "+(r));
+            Console.WriteLine("Тогда периметр круга = "+(2*p*r));
+            Console.WriteLine("А площадь круга = " + (p * r*r));
+            Console.ReadKey();
+        }
+    }
+}

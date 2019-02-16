@@ -1,0 +1,35 @@
+using System;
+using System.Numerics;
+using System.Collections.Generic;
+
+using System.Text;
+
+
+
+namespace ConsoleApp1
+
+{
+
+    internal class Program
+    //06-08-program that calculates Catalan number by n
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("¬ведите число N: ");
+            int n = int.Parse(Console.ReadLine());
+            long denum = 1;
+            long num = 1;
+            long result = 1;
+            for (int i = 1; i <= n+1; i++)
+            {
+                denum *= i;
+            } 
+            for (int i1 = n+1; i1 <= 2*n; i1++)
+            {
+                num *= i1;
+            }
+             result = num / denum;
+            Console.WriteLine("Catalan Number by N = " + result);
+        }
+    }
+}

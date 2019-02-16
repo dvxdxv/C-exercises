@@ -1,0 +1,79 @@
+    //06-04-prints all possible cards from a standard deck
+    {
+        static void Main(string[] args)
+         {
+            string cardSuit;
+            Console.WriteLine("Вот такие карты в стандартной колоде: ");
+            for (int s = 1; s < 5; s++)
+            {
+                switch (s)
+                {
+                    case 1:
+                        cardSuit = " треф";
+                        break;
+                    case 2:
+                        cardSuit = " бубей";
+                        break;
+                    case 3:
+                        cardSuit = " червей";
+                        break;
+                    case 4:
+                        cardSuit = " пик";
+                        break;
+                    default:
+                        cardSuit = "Во всём виноват джокер";
+                        break;
+                }
+
+
+                        for (int i = 2; i < 15; i++)
+            
+                    switch (i)
+                    {
+                    case 2:
+                        Console.WriteLine("двойка"+cardSuit);
+                        break;
+                    case 3:
+                        Console.WriteLine("тройка" + cardSuit);
+                        break;
+                    case 4:
+                        Console.WriteLine("четверка" + cardSuit);
+                        break;
+                    case 5:
+                        Console.WriteLine("пятерка" + cardSuit);
+                        break;
+                    case 6:
+                        Console.WriteLine("шестерка" + cardSuit);
+                        break;
+                    case 7:
+                        Console.WriteLine("семерка" + cardSuit);
+                        break;
+                    case 8:
+                        Console.WriteLine("восьмерка" + cardSuit);
+                        break;
+                    case 9:
+                        Console.WriteLine("девятка" + cardSuit);
+                        break;
+                    case 10:
+                        Console.WriteLine("десятка" + cardSuit);
+                        break;
+                    case 11:
+                        Console.WriteLine("валет" + cardSuit);
+                        break;
+                    case 12:
+                        Console.WriteLine("дама" + cardSuit);
+                        break;
+                    case 13:
+                        Console.WriteLine("король" + cardSuit);
+                        break;
+                    case 14:
+                        Console.WriteLine("туз" + cardSuit);
+                        break;
+                    default:
+                        Console.WriteLine("Во всём виноват джокер");
+                        break;
+                    }
+            }
+        }
+    }
+}

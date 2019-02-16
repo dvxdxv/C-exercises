@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3
+{
+    class Program
+    //Bitwise Replace
+    {
+        static void Main(string[] args)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            int n = 35;
+            int v = 1;
+            int p = 2;
+            //n = n & (~(1 << p)); //reset bit
+            n = n |(1 << p);        //set bit
+            Console.WriteLine(n);
+            //Console.WriteLine((v & mask) != 0 ? 1 : 0);
+            Console.ReadKey();
+
+        }
+    }
+}

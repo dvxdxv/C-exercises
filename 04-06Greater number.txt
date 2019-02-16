@@ -1,0 +1,14 @@
+//***Greater number***
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите 2 числа: \n");
+            int a = int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
+            Console.WriteLine("Большее число: "+Math.Max(a, b));
+            Console.ReadKey();
+        }
+    }
+}

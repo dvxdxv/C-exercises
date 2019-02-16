@@ -1,0 +1,89 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3
+//05-09_5 Numbers Subsets whose sum is 0
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var a = int.Parse(Console.ReadLine());
+            var b = int.Parse(Console.ReadLine());
+            var c = int.Parse(Console.ReadLine());
+            var d = int.Parse(Console.ReadLine());
+            var e = int.Parse(Console.ReadLine());
+            int sumZero = 0;
+            if (a + b + c + d + e == 0)
+            {sumZero++;}
+            if (a + b + c + d == 0)
+            { sumZero++; }
+            if (a + b + c + e == 0)
+            { sumZero++; }
+            if (a + b + d + e == 0)
+            { sumZero++; }
+            if (a + c + d + e == 0)
+            { sumZero++; }
+            if (b + c + d + e == 0)
+            { sumZero++; }
+
+            if (a + b + c == 0)
+            { sumZero++; }
+            if (a + b + d == 0)
+            { sumZero++; }
+            if (a + b + e == 0)
+            { sumZero++; }
+            if (b + c + d == 0)
+            { sumZero++; }
+            if (b + c + e == 0)
+            { sumZero++; }
+            if (c + d + e == 0)
+            { sumZero++; }
+            if (b + d + e == 0)
+            { sumZero++; }
+            if (a + d + e == 0)
+            { sumZero++; }
+            if (a + c + e == 0)
+            { sumZero++; }
+            if (a + c + d == 0)
+            { sumZero++; }
+
+            if (a + b == 0)
+            { sumZero++; }
+            if (b + c == 0)
+            { sumZero++; }
+            if (c + d == 0)
+            { sumZero++; }
+            if (d + e == 0)
+            { sumZero++; }
+            if (a + c == 0)
+            { sumZero++; }
+            if (a + d == 0)
+            { sumZero++; }
+            if (a + e == 0)
+            { sumZero++; }
+            if (b + d == 0)
+            { sumZero++; }
+            if (b + e == 0)
+            { sumZero++; }
+            if (c + e == 0)
+            { sumZero++; }
+
+            if (a == 0)
+            { sumZero++;}
+            if (b == 0)
+            { sumZero++; }
+            if (c == 0)
+            { sumZero++; }
+            if (d == 0)
+            { sumZero++; }
+            if (e == 0)
+            { sumZero++; }
+
+            Console.WriteLine("Количество подмножеств, сумма которых равна 0 = "+sumZero);
+        }
+    }
+} 

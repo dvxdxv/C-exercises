@@ -1,0 +1,20 @@
+//6-2 print numbers not divisible by 3 and 7 simultaneously
+    {
+         static void Main(string[] args)
+         {
+            Console.Write("¬ведите число N: ");
+            int n = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= n; i++)
+            {
+                if (i % (3*7) == 0)
+                {
+                    continue;
+                }
+                else
+                {
+                    Console.Write(i + " ");
+                }
+            }
+         }
+    }
+}

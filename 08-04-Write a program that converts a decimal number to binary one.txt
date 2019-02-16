@@ -1,0 +1,23 @@
+
+using System;
+namespace SortApp
+{
+    class Program //08-04-Write a program that converts a decimal number to binary one
+    {
+        static void Main(string[] args)
+        {
+            // ввод чисел
+            var num10 = int.Parse(Console.ReadLine());
+            var bit = 0;
+            string binary = "";
+            do
+            {
+                bit = num10 % 2;
+                binary = Convert.ToString(bit)+binary;
+                num10 = num10 / 2;
+
+            } while (num10>=1);
+            Console.WriteLine(binary);
+            Console.ReadLine();
+        }
+    }

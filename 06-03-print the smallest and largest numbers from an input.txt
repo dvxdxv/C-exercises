@@ -1,0 +1,26 @@
+    //06-03-print the smallest and largest numbers from an input
+    {
+        static void Main(string[] args)
+         {
+            Console.Write("Введите количество чисел N: ");
+            var min = int.MaxValue;
+            var max = int.MinValue;
+            int n = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= n; i++)
+            {
+                int num = int.Parse(Console.ReadLine());
+              //Определяем минимальное число
+                if (num > max)
+                {
+                    max = num;
+                }
+              //Определяем максимальное число
+                if (num < min)
+                {
+                    min = num;
+                }
+            }
+            Console.WriteLine("Min number of input numbers is: {0},/nMax number of input numbers is: {1}", min, max);
+        }
+    }
+}

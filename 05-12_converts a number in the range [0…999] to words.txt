@@ -1,0 +1,96 @@
+05-12_converts a number in the range [0…999] to words
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var num = int.Parse(Console.ReadLine());
+            var str3 = (string)null;
+            var str2 = (string)null;
+            var str1 = (string)null;
+            int digit3 = num / 100;
+            int digit2 = (num % 100 - num % 10)/10;
+            int digit1 = num % 10;
+
+
+            switch (digit3)
+            {
+                case 1: str3 = "one hundred"; break;
+                case 2: str3 = "two hundred"; break;
+                case 3: str3 = "three hundred"; break;
+                case 4: str3 = "four hundred"; break;
+                case 5: str3 = "five hundred"; break;
+                case 6: str3 = "six hundred"; break;
+                case 7: str3 = "seven hundred"; break;
+                case 8: str3 = "eight hundred"; break;
+                case 9: str3 = "nine hundred"; break;
+                case 0: str3 = ""; break;
+                default:
+                    Console.WriteLine("An error is occured");
+                    break;
+            }
+            switch (digit1)
+            {
+                case 1: str1 = "one"; break;
+                case 2: str1 = "two"; break;
+                case 3: str1 = "three"; break;
+                case 4: str1 = "four"; break;
+                case 5: str1 = "five"; break;
+                case 6: str1 = "six"; break;
+                case 7: str1 = "seven"; break;
+                case 8: str1 = "eight"; break;
+                case 9: str1 = "nine"; break;
+                case 0: str1 = ""; break;
+                default:
+                    Console.WriteLine("An error is occured");
+                    break;
+            }
+            switch (digit2)
+            {
+                case 1:
+                    switch (num % 100)
+                    {
+                        case 10: str2 = ""; str1 = "ten"; break;
+                        case 11: str2 = ""; str1 = "eleven"; break;
+                        case 12: str2 = ""; str1 = "twelve"; break;
+                        case 13: str2 = ""; str1 = "thirteen"; break;
+                        case 14: str2 = ""; str1 = "fourteen"; break;
+                        case 15: str2 = ""; str1 = "fifteen"; break;
+                        case 16: str2 = ""; str1 = "sixteen"; break;
+                        case 17: str2 = ""; str1 = "seventeen"; break;
+                        case 18: str2 = ""; str1 = "eighteen"; break;
+                        case 19: str2 = ""; str1 = "nineteen"; break;
+                        default:
+                            Console.WriteLine("An error is occured");
+                            break;
+                    }
+                    break;
+                case 2: str2 = "twenty"; break;
+                case 3: str2 = "thirty"; break;
+                case 4: str2 = "fourty"; break;
+                case 5: str2 = "fifty"; break;
+                case 6: str2 = "sixty"; break;
+                case 7: str2 = "seventy"; break;
+                case 8: str2 = "eighty"; break;
+                case 9: str2 = "ninety"; break;
+                case 0: str2 = ""; break;
+                default:
+                    Console.WriteLine("An error is occured");
+                    break;
+            }
+            if (num < 20)
+            { Console.WriteLine(str1); }
+            else if (num % 100 == 0)
+             { Console.WriteLine(str3); }
+            else if (num < 100 && digit1 != 0)
+            { Console.WriteLine(str2+"-"+str1); }
+            else if (num < 100 && digit1 == 0)
+            { Console.WriteLine(str2); }
+            else if (num%10!=0 && digit2!=0)
+                { Console.WriteLine(str3 + " " + "and" + " " + str2 + "-" + str1); }
+            else 
+            { Console.WriteLine(str3 + " " + "and" + " " + str2 + str1);}
+        } 
+    }
+}   
+

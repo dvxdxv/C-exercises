@@ -1,0 +1,23 @@
+    class Program
+  //Circle withIn & Rectangle out Check
+    {
+        static void Main(string[] args)
+        {
+            int x, y;
+            {
+                Console.WriteLine("Положение точки А на оси абцисс:");
+                x = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Положение точки А на оси ординат:");
+                y = Convert.ToInt32(Console.ReadLine());
+                if (-1 <= x && x <=5 && 1 <= y && y <= 5)
+                { Console.WriteLine("Увы, мимо!"); }
+                else
+                {
+                    int cCheck = x * x + y * y;
+                    Console.WriteLine(cCheck > 5 * 5 ? "Мимо!" : "В точку!");
+                }
+                
+                Console.ReadKey();
+            }
+        }
+    }

@@ -1,0 +1,28 @@
+//n numbers sum
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n;
+            
+            int num;
+            Console.WriteLine("¬ведите количество чисел, сумму которых надо посчитать: \n");
+            while (!int.TryParse(Console.ReadLine(), out n))
+            {
+                Console.WriteLine("Bad integer");
+            }
+            int sum = 0;
+            for (int i = 0; i < n; i++)
+            {
+                while (!int.TryParse(Console.ReadLine(), out num))
+                {
+                    Console.WriteLine("Bad integer");
+                }
+                sum = sum + num; 
+            }
+            Console.WriteLine("—умма n чисел = "+sum);
+            Console.ReadKey();
+        }
+    }
+}

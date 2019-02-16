@@ -1,0 +1,16 @@
+    //01-17-Array numbers miltiplied by 5
+    {
+        static void Main(string[] args)
+        {
+            var n = 20;
+            
+            int[] array = new int[n];
+            Console.WriteLine("Ёлементы массива:");
+            for (int i = 0; i < n; i++)
+            {
+                array[i] = i*5;
+                Console.WriteLine(array[i]); 
+            }
+        }
+    }
+}

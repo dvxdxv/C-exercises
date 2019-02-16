@@ -1,0 +1,55 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3
+{
+    class Program
+    //Integer Tetris
+    {
+        static void Main(string[] args)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            int x;
+                {
+                Console.WriteLine("Введите четырехзначное число в формате ABCD:");
+                string str = Console.ReadLine();
+                int length = str.Length;
+                Console.WriteLine(length);
+                if (length != 4)
+                {
+                    Console.WriteLine("Введено больше/меньше 4 символов");
+
+                }
+                else if (Int32.TryParse(str, out x))
+                    {
+                    int a = x / 1000;
+                    int b = (x - a * 1000) / 100;
+                    int c = x%100/10;
+                    int d = x % 10;
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine("A={0} B={1} C={2} D={3}", a, b, c, d);
+                    var sum = a + b + c + d;
+                    Console.WriteLine("Сумма цифр числа = {0}", sum);
+                    Console.WriteLine("В обратном порядке A={3} B={2} C={1} D={0}", a, b, c, d);
+                    Console.WriteLine("Первая цифра стала последней A={1} B={2} C={3} D={0}", a, b, c, d);
+                    Console.WriteLine("В середине цифры перепутались A={0} B={2} C={1} D={3}", a, b, c, d);
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.Beep();
+                    Console.WriteLine("Syntax Error: Вы ввели некорректные данные\nSystem is terminated now\n\n\n\n>C:\\ formatting..");
+                    Console.Beep();
+                    Console.Beep();
+                    Console.Beep(1000,200);
+                    Console.Beep(9800, 1000);
+                }
+                Console.ReadKey();
+
+                }
+            }
+        }
+    }

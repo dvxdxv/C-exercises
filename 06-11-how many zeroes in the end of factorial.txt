@@ -1,0 +1,33 @@
+using System;
+namespace ConsoleApp1
+{
+    internal class Program
+    //06-11-how many zeroes in the end of factorial 
+    {
+        static void Main(string[] args)
+        {
+            var n = 0;
+            var factN = 1d;
+            var zeroes = 0;
+            Console.WriteLine("¬ведите число n:");
+            n = int.Parse(Console.ReadLine());
+            for (int f = 1; f <= n; f++)
+            {
+                factN *= f;
+            }
+            for (int i = 1; i <= n; i++)
+            {
+                if (factN % Math.Pow(5,i)==0)
+                {
+                    zeroes++;
+                }
+                else
+                {
+                    break;
+                }
+            }
+            Console.WriteLine(zeroes);
+            Console.ReadKey();
+        }
+    }
+}

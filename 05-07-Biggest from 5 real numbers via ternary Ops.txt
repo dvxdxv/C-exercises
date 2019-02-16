@@ -1,0 +1,22 @@
+//05-07-Biggest from 5 real numbers via ternary Ops
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var t1 = 0d;
+            var t2 = 0d;
+            var t3 = 0d;
+            int a = int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
+            int c = int.Parse(Console.ReadLine());
+            int d = int.Parse(Console.ReadLine());
+            int e = int.Parse(Console.ReadLine());
+            t1 = a > b ? a : b;
+            t2 = c > d ? c : d;
+            t3 = t1 > t2 ? t1 : t2;
+            Console.WriteLine("Biggest number is " + (e > t3 ? e : t3));
+            
+        }
+    }
+}   

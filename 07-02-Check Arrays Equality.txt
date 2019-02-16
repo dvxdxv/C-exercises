@@ -1,0 +1,44 @@
+ //02-07-Check for equality of arrays
+    {
+        static void Main(string[] args)
+        {
+            var n = 0;
+            var m = 0;
+            var diff = 0;
+            Console.WriteLine("Введите количество символов массива А:");
+            n = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введите количество символов массива B:");
+            m = int.Parse(Console.ReadLine());
+            int[] array1 = new int[n];
+            int[] array2 = new int[m];
+            if (n == m)
+            {
+                Console.WriteLine("Введите {0} символов массива А:", n);
+                for (int i = 0; i < n; i++)
+                {
+                    array1 [i] = int.Parse(Console.ReadLine());
+                }
+                Console.WriteLine("Введите {0} символов массива B:", m);
+                for (int i1 = 0; i1 < m; i1++)
+                {
+                    array2 [i1] = int.Parse(Console.ReadLine());
+                }
+                //Проверка значений массивов на эквивалентность друг другу
+                var res = "";
+                for (int i = 0; i < n; i++)
+                {
+                    if (array1[i] != array2[i])
+                    {
+                        diff = diff + 1;
+                    }
+                }
+                res = diff == 0 ? res = "The arrays A and B is equaled!" : res = "The arrays A and B is not equaled!";
+                Console.WriteLine(res);
+            }
+            else
+            {
+                Console.WriteLine("The arrays A and B is not equaled!");
+            }
+
+        }
+    }

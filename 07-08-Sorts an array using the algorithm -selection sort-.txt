@@ -1,0 +1,40 @@
+
+    class Program //07-08-Sorts an array using the algorithm "selection sort"
+    {
+        static void Main(string[] args)
+        {
+            int n = 5;
+            int min;
+            {
+                int[] arr = new int [n];
+              //вводим элементы в массив
+                Console.WriteLine("Enter the values of the arrays {0} elements:", n);
+                for (int i = 0; i < n; i++)
+                {
+                    arr[i] = int.Parse(Console.ReadLine());
+                }
+                for (int i = 0; i < n - 1; i++)
+                {
+                    min = i;
+                    for (int j = i + 1; j < n; j++)
+                    {
+                        if (arr[j] < arr[min])
+                        {
+                            min = j;
+                        }
+                        if (min != i)
+                        {
+                            int temp = arr[min];
+                                arr[min] = arr[i];
+                            arr[i] = temp;
+                        }
+                    }
+                }
+                Console.WriteLine("Array is sorted in ascending order now:");
+                foreach (int item in arr)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+        }
+    }

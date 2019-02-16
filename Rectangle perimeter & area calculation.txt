@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3
+{
+    class Program
+  //Rectangle perimeter & area calculation
+    {
+        static void Main(string[] args)
+        {
+            int rectSide, rectHeight;
+            {
+                Console.WriteLine("Введите длину стороны прямоугольника А");
+                rectSide = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Введите высоту прямоугольника А");
+                rectHeight = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Периметр прямоугольника А:");
+                Console.WriteLine((rectSide+rectHeight)*2);
+                Console.WriteLine("Площадь прямоугольника А:");
+                Console.WriteLine(rectSide * rectHeight);
+                Console.ReadKey();
+            }
+        }
+    }
+}

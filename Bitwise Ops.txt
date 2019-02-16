@@ -1,0 +1,19 @@
+namespace ConsoleApp3
+{
+    class Program
+    //Bitwise Ops
+    {
+        static void Main(string[] args)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            int n = 35;
+            int i = 1;
+            int p = 6;
+            int mask = i << p;
+            Console.WriteLine((n & mask) != 0 ? 1 : 0);
+
+            Console.ReadKey();
+
+        }
+    }
+}
